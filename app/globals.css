@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a{
+  cursor: pointer;
+}
+li{
+  position: relative;
+}
+li:nth-child(4)::after,
+li:nth-child(1)::after{
+  content: "";
+  background-color: red;
+  width: 0px;
+  position: absolute;
+  transition: 1s ease-in-out;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+}
+li:nth-child(4):hover:after,
+li:nth-child(1):hover::after{
+  content: "";
+  background-color: red;
+  width: 95px;
+  position: absolute;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+}
+.c-size {
+  padding: 5px 15px;
+}
+.custom-h{
+  height: 100vh;
+}
+.custom-h2{
+  height: 150px;
+}
+.Circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 200px;
+  outline: 2px solid black;
+}
+.Circle2{
+  width: 75px;
+  height: 75px;
+  border-radius: 200px;
+  outline:2px solid white ;
+}
+.Circle3{
+  width: 75px;
+  height:75px;
+  border-radius: 200px;
+  outline:2px solid black ;
+}
+@media screen and (max-width:767px) {
+  .custom-con:hover .custom-hov{
+    display: flex;
+  }
+  .custom-con:hover + .custom-m{
+    margin-left: 48px;
+  }
+  .custom-con:hover{
+    position: fixed;
+    width: 200px;
+    z-index: 5;
+  }
+  .custom-hov{
+    display: none;
+  }
+}
+@media screen and (max-width:575px) {
+  .custom-width{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .custom-h{
+    height: 110vh;
+  }
+}
